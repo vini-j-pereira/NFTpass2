@@ -1,0 +1,205 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* BODY */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460, #53354a);
+    background-size: 400% 400%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    overflow: hidden; /* Para conter as formas animadas */
+    animation: background-vibes 8s infinite linear;
+    position: relative;
+  }
+  
+  /* FORMAS GEOMÉTRICAS */
+  body::before,
+  body::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    animation: pulse-geometry 8s infinite ease-in-out;
+    z-index: 0;
+  }
+  
+  body::after {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(45deg, rgba(255, 0, 255, 0.3), transparent);
+    transform: translate(-50%, -50%) scale(0.5);
+    animation: rotate-geometry 10s infinite linear;
+  }
+  
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f9d342;
+    text-transform: uppercase;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  .btn-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: #d442f9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #d442f9b2;
+    transform: scale(1.1);
+  }
+  
+  .btn.secondary {
+    background-color: #5762d5;
+  }
+  
+  .btn.secondary:hover {
+    background-color: #404eb0;
+  }
+  
+  /* MAIN */
+  main {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fade-in 1.5s ease-in-out;
+  }
+  
+  main p.subtitle {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ddd;
+    margin-top: 10px;
+    animation: subtitle-fade-in 2s ease-in-out;
+  }
+  
+  main p.subtitle .highlight {
+    color: #f9d342;
+    font-weight: 700;
+    animation: color-flicker 1.5s infinite alternate ease-in-out;
+  }
+  
+  /* FOOTER */
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 10px 0;
+    background-color: #111;
+    color: #aaa;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* ANIMAÇÕES */
+  @keyframes background-vibes {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes pulse-geometry {
+    0%, 100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 0.3;
+    }
+  }
+  
+  @keyframes rotate-geometry {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes subtitle-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes color-flicker {
+    from {
+      color: #f9d342;
+    }
+    to {
+      color: #fff;
+    }
+  }
