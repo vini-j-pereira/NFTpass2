@@ -28,6 +28,24 @@
     z-index: 1;
   }
 
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo button a{
+    background-color: #f9d342;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  .logo button{
+    border: none;
+  }
+
   .logo a{
     font-size: 1.5rem;
     font-weight: 700;

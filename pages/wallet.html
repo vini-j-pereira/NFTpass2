@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toky Wallet</title>
+  <link rel="stylesheet" href="/css/wallet.css">
+</head>
+<body>
+  <header>
+    <h1>Toky Wallet</h1>
+    <button id="createWalletButton">Criar Carteira</button>
+    <button id="accessWalletButton">Acessar Carteira</button>
+  </header>
+
+  <main>
+    <!-- Criação da Carteira -->
+    <section id="createWalletSection" style="display: none;">
+      <h2>Criar Nova Carteira</h2>
+      <input type="text" id="ownerName" placeholder="Digite seu Nome">
+      <button id="generatePhraseButton">Gerar Frase de Recuperação</button>
+      <p id="recoveryPhrase" style="display: none;"></p>
+      <button id="saveWalletButton" style="display: none;">Salvar Carteira</button>
+    </section>
+
+    <!-- Acesso à Carteira -->
+    <section id="accessWalletSection" style="display: none;">
+      <h2>Acessar Carteira</h2>
+      <input type="password" id="walletPassword" placeholder="Digite sua senha">
+      <button id="loginButton">Entrar</button>
+    </section>
+
+    <!-- Detalhes da Carteira -->
+    <section id="walletDetailsSection" style="display: none;">
+      <h2>Detalhes da Carteira</h2>
+      <p><strong>Nome:</strong> <span id="ownerNameDisplay"></span></p>
+      <p><strong>Saldo Total (USD):</strong> <span id="walletBalanceDisplay"></span></p>
+      <button id="addFundsButton">Adicionar Fundos</button>
+      <button id="transferCryptoButton">Transferir Criptomoeda</button>
+    </section>
+  </main>
+
+  <script src="/js/web3.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
