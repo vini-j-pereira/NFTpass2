@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* BODY */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460, #53354a);
+    background-size: 400% 400%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    overflow: hidden; /* Para conter as formas animadas */
+    animation: background-vibes 8s infinite linear;
+    position: relative;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .logo a{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f9d342;
+    text-transform: uppercase;
+    animation: pulse 2s infinite ease-in-out;
+    text-decoration: none;
+  }
+
+  .saldo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .saldo p{
+    font-weight: bold;
+  }
+
+  .saldo span{
+    background-color: #fff;
+    width: 150px;
+    padding: 8px;
+    color: #1a1a2e;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #walletName{
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1.5px solid #d442f9;
+  }
