@@ -32,7 +32,7 @@
     background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(1);
-    animation: pulse-geometry 8s infinite ease-in-out;
+    animation: pulse-geometry 6s infinite ease-in-out;
     z-index: 0;
   }
   
@@ -41,7 +41,7 @@
     height: 500px;
     background: linear-gradient(45deg, rgba(255, 0, 255, 0.3), transparent);
     transform: translate(-50%, -50%) scale(0.5);
-    animation: rotate-geometry 10s infinite linear;
+    animation: rotate-geometry 8s infinite linear;
   }
   
   /* HEADER */
