@@ -39,7 +39,7 @@
   body::after {
     width: 500px;
     height: 500px;
-    background: linear-gradient(45deg, rgba(255, 0, 255, 0.3), transparent);
+    background: linear-gradient(45deg, #ff00ff4d, transparent);
     transform: translate(-50%, -50%) scale(0.5);
     animation: rotate-geometry 8s infinite linear;
   }
@@ -54,12 +54,11 @@
     z-index: 1;
   }
   
-  .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #f9d342;
+  .logo img{
+    width: 5rem;
     text-transform: uppercase;
     animation: pulse 2s infinite ease-in-out;
+    margin-top: -10px;
   }
   
   .btn-container {
