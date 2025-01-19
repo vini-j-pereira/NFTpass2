@@ -4,6 +4,16 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  @font-face{
+    font-family: "Garet";
+    src: url("../fonts/Garet-Book.woff") format("woff");
+  }
+
+  @font-face{
+    font-family: "Garet-Heavy";
+    src: url("../fonts/Garet-Heavy.woff") format("woff");
+  }
   
   /* BODY */
   body {
@@ -105,16 +115,17 @@
   }
   
   main h1 {
-    font-size: 2.5rem;
+    font-family: "Garet", sans-serif;
+    font-size: 2rem;
     margin-bottom: 20px;
     animation: fade-in 1.5s ease-in-out;
   }
   
   main p.subtitle {
-    font-size: 1.2rem;
+    font-family: "Garet";
+    font-size: 1rem;
     line-height: 1.5;
     color: #ddd;
-    margin-top: 10px;
     animation: subtitle-fade-in 2s ease-in-out;
   }
   
